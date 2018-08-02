@@ -6,7 +6,7 @@ var score=0
     Appends the key to the scorecard, and adds it to the total score.
     The key must be numeric or a '.'.
 */
-function enter(key) { 
+function enter(key) {
     scorecard = scorecard + key;
     document.getElementById('scorecard').innerHTML = scorecard
     if (key != '.') score = score + key;
@@ -19,7 +19,7 @@ function enter(key) {
 function backspace() {
     var previousBall = scorecard.charAt(scorecard.length - 1);
     score = score - previousBall;
-    scorecard = scorecard.substring(0, scorecard.length);
+    scorecard = scorecard.substring(0, scorecard.length-1);
     document.getElementById('scorecard').innerHTML = scorecard;
     document.getElementById('score').innerHTML = score;
 }
